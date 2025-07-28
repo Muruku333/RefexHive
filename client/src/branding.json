@@ -1,0 +1,24 @@
+{
+  "brandName": "Refex Hive",
+  "title": "Intranet",
+  "company": {
+    "name": "Phoenixcoded",
+    "url": "https://phoenixcoded.net",
+    "socialLink": {
+      "linkedin": "https://in.linkedin.com/company/phoenixcoded",
+      "instagram": "#",
+      "facebook": "https://www.facebook.com/Phoenixcoded/",
+      "youtube": "https://www.youtube.com/@Phoenixcoded",
+      "github": "https://github.com/phoenixcoded",
+      "dribble": "https://dribbble.com/Phoenixcoded",
+      "discord": "https://discord.gg/gmqz4BWYA8",
+      "support": "https://support.phoenixcoded.net"
+    }
+  },
+  "logo": {
+    "main": "/assets/logo/refex_logo.png",
+    "logoIcon": "/assets/logo/refex_icon.png",
+    "logoFab": "/assets/logo/refex_logo.png",
+    "logoWatermark": "/assets/logo/refex_logo.png"
+  }
+}
