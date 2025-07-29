@@ -1,9 +1,8 @@
-"use strict";
-const { Model } = require("sequelize");
+const { Model, DataTypes } = require("sequelize");
 const { v4: uuidv4 } = require("uuid");
 
-module.exports = (sequelize, DataTypes) => {
-  class User extends Model {
+module.exports = (sequelize) => {
+  class Client extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -11,40 +10,35 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      User.belongsTo(models.User, {
+      Client.belongsTo(models.User, {
+        foreignKey: "associate_user_id",
+        as: "associate_user",
+      });
+      Client.belongsTo(models.User, {
         foreignKey: "created_by",
         as: "creator",
       });
-      User.belongsTo(models.User, {
+      Client.belongsTo(models.User, {
         foreignKey: "updated_by",
         as: "updater",
       });
-      User.belongsTo(models.User, {
+      Client.belongsTo(models.User, {
         foreignKey: "deleted_by",
         as: "deleter",
       });
     }
   }
-  User.init(
+  Client.init(
     {
       id: {
         type: DataTypes.UUID,
-        defaultValue: uuidv4,
+        defaultValue: uuidv4, // automatically generates UUID v4
         primaryKey: true,
       },
       name: DataTypes.STRING,
-      email: DataTypes.STRING(100),
-      phone: DataTypes.STRING(20),
-      password: DataTypes.STRING(100),
-      photo: DataTypes.STRING(100),
-      role: DataTypes.STRING(10),
-      is_verified: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: 0,
-      },
-      is_active: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: 1,
+      secret: DataTypes.STRING(100),
+      associate_user_id: {
+        type: DataTypes.UUID,
       },
       created_by: {
         type: DataTypes.UUID,
@@ -58,12 +52,12 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       sequelize,
-      modelName: "User",
+      modelName: "Client",
       paranoid: true,
       createdAt: "created_at",
       updatedAt: "updated_at",
       deletedAt: "deleted_at",
     }
   );
-  return User;
+  return Client;
 };

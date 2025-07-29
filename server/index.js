@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const fs = require("fs");
 const morgan = require("morgan");
 const path = require("path");
+const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const { sequelize } = require("./src/models/index");
 const history = require("connect-history-api-fallback");
@@ -25,6 +26,7 @@ app.use("/uploads", express.static(__dirname + "/uploads"));
 //     credentials: true,
 //   })
 // );
+app.use(cookieParser());
 app.use(cors("*")); // To allow all orgins =============================
 
 // simple route
@@ -37,7 +39,7 @@ app.get("/", (req, res) => {
 
 // app.use("/auth", require("./src/routes/auth"));
 
-app.use("/api", require("./src/routes/user"));
+app.use("/api", require("./src/routes/auth"), require("./src/routes/user"));
 
 app.all("/api/*", (req, res) => {
   return status.ResponseStatus(res, 404, "Endpoint Not Found");
