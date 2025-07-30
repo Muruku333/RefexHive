@@ -30,12 +30,12 @@ const socialIcons = [
     link: { href: `${branding.company.socialLink.youtube}`, ...linkProps }
   },
   {
-    icon: 'tabler-filled-brand-github',
-    link: { href: `${branding.company.socialLink.github}`, ...linkProps }
+    icon: 'tabler-filled-instagram',
+    link: { href: `${branding.company.socialLink.instagram}`, ...linkProps }
   },
   {
-    icon: 'tabler-filled-dribble',
-    link: { href: `${branding.company.socialLink.dribble}`, ...linkProps }
+    icon: 'tabler-filled-x',
+    link: { href: `${branding.company.socialLink.twitter}`, ...linkProps }
   }
 ];
 
