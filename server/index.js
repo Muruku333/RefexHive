@@ -37,9 +37,9 @@ app.get("/", (req, res) => {
   });
 });
 
-// app.use("/auth", require("./src/routes/auth"));
+app.use("/auth", require("./src/routes/auth"));
 
-app.use("/api", require("./src/routes/auth"), require("./src/routes/user"));
+app.use("/api", require("./src/routes/user"));
 
 app.all("/api/*", (req, res) => {
   return status.ResponseStatus(res, 404, "Endpoint Not Found");
