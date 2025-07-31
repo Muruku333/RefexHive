@@ -9,12 +9,13 @@ const cspHeader = `
     base-uri 'self';
     form-action 'self';
     media-src 'self' https://*.cloudfront.net;
-    connect-src 'self' https://www.googletagmanager.com https://raw.githubusercontent.com https://phpstack-207002-5085356.cloudwaysapps.com https://*.clarity.ms https://*.azurewebsites.net;
+    connect-src 'self' https://www.googletagmanager.com https://raw.githubusercontent.com https://phpstack-207002-5085356.cloudwaysapps.com https://*.clarity.ms https://*.azurewebsites.net https://api.iconify.design;
 `;
 
 const nextConfig = {
   // output: 'standalone',
   // distDir: 'build',
+
   modularizeImports: {
     '@mui/material': {
       transform: '@mui/material/{{member}}'
@@ -42,6 +43,18 @@ const nextConfig = {
             value: cspHeader.replace(/\n/g, '')
           }
         ]
+      }
+    ];
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: 'http://localhost:3001/api/:path*' // Proxy to Backend
+      },
+      {
+        source: '/uploads/:path*',
+        destination: 'http://localhost:3001/uploads/:path*' // Proxy to Backend
       }
     ];
   }

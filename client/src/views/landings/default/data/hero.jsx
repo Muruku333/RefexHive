@@ -36,7 +36,7 @@ export const hero = {
   primaryBtn: { children: 'Explore Blocks', href: SECTION_PATH },
   // videoSrc: 'https://d2elhhoq00m1pj.cloudfront.net/saasable-intro.mp4',
   // videoThumbnail: '/assets/videos/thumbnails/intro-thumbnail.png',
-  videoSrc: '/assets/videos/refex-intro.mp4',
+  videoSrc: '/uploads/videos/refex-intro.mp4',
   videoThumbnail: '/assets/videos/thumbnails/refex-thumbnail.png',
   listData: [
     { image: '/assets/images/shared/react.svg', title: 'React 19' },

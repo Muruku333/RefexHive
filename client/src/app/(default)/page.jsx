@@ -15,7 +15,7 @@ export default function HomePage() {
         <Main />
 
         {/* scroll to top section */}
-        <ScrollFab />
+        {/* <ScrollFab /> */}
       </>
     </ThemeAI>
   );
