@@ -1,7 +1,7 @@
 'use client';
 
 // @project
-import { Feature20 } from '@/blocks/feature';
+// import { Feature20 } from '@/blocks/feature';
 import { Hero17 } from '@/blocks/hero';
 import LazySection from '@/components/LazySection';
 import useDataThemeMode from '@/hooks/useDataThemeMode';
@@ -16,12 +16,16 @@ import {
   feature20,
   feature21,
   feature18,
+  slide,
   hero,
   integration,
   other,
   pricing,
-  testimonial
+  testimonial,
+  chairman,
+  leadership
 } from './data';
+import { Carousel } from '@/blocks/life-at-refex';
 
 /***************************  PAGE - MAIN  ***************************/
 
@@ -31,13 +35,13 @@ export default function Main() {
   return (
     <>
       <Hero17 {...hero} />
-      <Feature20 {...feature20} />
+      <Carousel {...slide} />
+      {/* <Feature20 {...feature20} /> */}
 
       <LazySection
         sections={[
-          { importFunc: () => import('@/blocks/benefit').then((module) => ({ default: module.Benefit5 })), props: benefit },
-          { importFunc: () => import('@/blocks/integration').then((module) => ({ default: module.Integration2 })), props: integration },
-          { importFunc: () => import('@/blocks/other').then((module) => ({ default: module.Other1 })), props: other }
+          { importFunc: () => import('@/blocks/chairman').then((module) => ({ default: module.Corner })), props: chairman },
+          { importFunc: () => import('@/blocks/chairman').then((module) => ({ default: module.Leadership })), props: leadership }
         ]}
         offset="200px"
       />

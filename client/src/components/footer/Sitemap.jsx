@@ -113,7 +113,7 @@ export default function Sitemap({ list, isMenuDesign }) {
       {(list || menuItems).map((item, index) => (
         <Grid key={index} {...item.grid}>
           <Stack sx={{ alignItems: 'flex-start', gap: { md: 3 } }}>
-            <Typography variant="h4">{item.title}</Typography>
+            <Typography variant="h4">{item.title ? item.title : <>&nbsp;</>}</Typography>
             <MenuList>
               {item?.menu &&
                 item?.menu.map((menu, i) => (

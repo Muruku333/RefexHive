@@ -144,8 +144,8 @@ export const SEO_CONTENT = {
   },
 
   login: {
-    title: 'Login Sections',
-    description: `${branding.brandName} login sections offer clean, user-friendly interfaces that streamline secure access to applications, ensuring a smooth entry point for users.`
+    title: 'Login',
+    description: `${branding.brandName} login page, user-friendly interfaces that streamline secure access to applications, ensuring a smooth entry point for users.`
   },
 
   newPassword: {

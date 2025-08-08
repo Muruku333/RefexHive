@@ -29,79 +29,103 @@ import { SECTION_COMMON_PY } from '@/utils/constant';
 const linkProps = { target: '_blank', rel: 'noopener noreferrer' };
 const data = [
   {
-    id: 'company',
+    id: 'business',
     grid: { size: { xs: 6, sm: 'auto' } },
-    title: 'Company',
+    title: 'Business',
     menu: [
       {
-        label: 'Why Phoenixcoded?',
+        label: 'Refex Refrigerants',
         link: {
-          href: 'https://blog.saasable.io/a-decade-of-expertise-the-phoenixcoded-story-and-why-you-should-trust-us',
+          href: 'https://www.refex.group/refex-refrigerants/',
           ...linkProps
         }
       },
       {
-        label: 'About',
-        link: { href: 'https://saasable.io/about', ...linkProps }
+        label: 'Refex Renewables',
+        link: { href: 'https://www.refex.group/refex-renewables/', ...linkProps }
       },
       {
-        label: 'Contact Us',
-        link: { href: '/contact', ...linkProps }
+        label: 'Refex Ash & Coal Handling',
+        link: { href: 'https://www.refex.group/refex-ash-coal-handling/', ...linkProps }
+      },
+      {
+        label: 'Refex Power Trading',
+        link: { href: 'https://www.refex.group/power-trading/', ...linkProps }
+      },
+      {
+        label: 'Refex Medtech',
+        link: { href: 'https://www.refex.group/refex-medtech/', ...linkProps }
+      },
+      {
+        label: 'Refex Capital',
+        link: { href: 'https://www.refex.group/refex-capital/', ...linkProps }
+      },
+      {
+        label: 'Refex Airports',
+        link: { href: 'https://www.refex.group/refex-airports/', ...linkProps }
+      },
+      {
+        label: 'Refex Green Mobility',
+        link: { href: 'https://www.refex.group/refex-eveelz/', ...linkProps }
+      },
+      {
+        label: 'Pharma | RL Fine Chem',
+        link: { href: 'https://www.refex.group/pharma-rl-fine-chem/', ...linkProps }
       }
     ]
   },
   {
-    id: 'support',
+    id: 'quick-links',
     grid: { size: { xs: 6, sm: 'auto' } },
-    title: 'Support',
+    title: 'Quick Links',
     menu: [
       {
-        label: 'Pricing',
+        label: 'Purple Flow',
         link: { href: '#' }
       },
       {
-        label: 'FAQ',
+        label: 'Newsroom',
         link: { href: '#' }
-      },
-      {
-        label: 'Support',
-        link: { href: branding.company.socialLink.support, ...linkProps }
-      },
-      {
-        label: 'License Terms',
-        link: { href: 'https://mui.com/store/license/', ...linkProps }
-      },
-      {
-        label: 'Discord',
-        link: { href: branding.company.socialLink.discord, ...linkProps }
       }
+      // {
+      //   label: 'Support',
+      //   link: { href: branding.company.socialLink.support, ...linkProps }
+      // },
+      // {
+      //   label: 'License Terms',
+      //   link: { href: 'https://mui.com/store/license/', ...linkProps }
+      // },
+      // {
+      //   label: 'Discord',
+      //   link: { href: branding.company.socialLink.discord, ...linkProps }
+      // }
     ]
   },
   {
-    id: 'resources',
+    id: 'hr-corner',
     grid: { size: { xs: 12, sm: 'auto' } },
-    title: 'Resources',
+    title: 'HR Corner',
     menu: [
       {
-        label: 'Freebies',
-        link: { href: FREEBIES_URL, ...linkProps }
+        label: 'Org Char',
+        link: { href: '#', ...linkProps }
       },
       {
-        label: 'Documentation',
-        link: { href: DOCS_URL, ...linkProps }
+        label: 'Know Your HR',
+        link: { href: '#', ...linkProps }
       },
       {
-        label: 'Blog',
-        link: { href: 'https://blog.saasable.io/', ...linkProps }
-      },
-      {
-        label: 'Privacy Policy',
-        link: { href: '/privacy-policy', ...linkProps }
-      },
-      {
-        label: 'Refund Policy',
-        link: { href: 'https://mui.com/store/customer-refund-policy/', ...linkProps }
+        label: 'Company Directory',
+        link: { href: '#', ...linkProps }
       }
+      // {
+      //   label: 'Induction',
+      //   link: { href: '#', ...linkProps }
+      // },
+      // {
+      //   label: 'Refund Policy',
+      //   link: { href: 'https://mui.com/store/customer-refund-policy/', ...linkProps }
+      // }
     ]
   }
 ];
@@ -109,21 +133,21 @@ const data = [
 const iconProps = { color: 'text.secondary' };
 
 const usefullLinks = [
-  {
-    icon: <SvgIcon name="tabler-brand-figma" {...iconProps} />,
-    title: 'Figma Version 1.1.0',
-    href: 'https://www.figma.com/community/file/1425095061180549847'
-  },
-  {
-    icon: <SvgIcon name="tabler-route" {...iconProps} />,
-    title: 'React Material UI v7',
-    href: 'https://mui.com/material-ui/getting-started'
-  },
-  {
-    icon: <SvgIcon name="tabler-sparkles" {...iconProps} />,
-    title: 'Documentation',
-    href: DOCS_URL
-  }
+  // {
+  //   icon: <SvgIcon name="tabler-brand-figma" {...iconProps} />,
+  //   title: 'Figma Version 1.1.0',
+  //   href: 'https://www.figma.com/community/file/1425095061180549847'
+  // },
+  // {
+  //   icon: <SvgIcon name="tabler-route" {...iconProps} />,
+  //   title: 'React Material UI v7',
+  //   href: 'https://mui.com/material-ui/getting-started'
+  // },
+  // {
+  //   icon: <SvgIcon name="tabler-sparkles" {...iconProps} />,
+  //   title: 'Documentation',
+  //   href: DOCS_URL
+  // }
 ];
 
 /***************************  FOOTER - 7  ***************************/
@@ -133,7 +157,7 @@ export default function Footer7() {
     <Stack sx={{ alignItems: 'flex-start', gap: { xs: 1.5, sm: 3 } }}>
       <LogoSection />
       <Typography variant="h6" sx={{ maxWidth: { sm: 280 }, mb: { xs: -1, sm: -2.5 } }}>
-        {process.env.NEXT_PUBLIC_VERSION}
+        {branding.brandName} {process.env.NEXT_PUBLIC_VERSION}
       </Typography>
       <Typography variant="body2" sx={{ maxWidth: { sm: 280 } }}>
         Explore the different versions of our {branding.brandName} template.

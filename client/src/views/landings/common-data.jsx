@@ -62,56 +62,58 @@ function footerData() {
 
 export const landingMegamenu = {
   id: 'landings',
-  title: 'Landings',
+  title: 'Apps',
   megaMenu: {
     type: MegaMenuType.MEGAMENU4,
     popperOffsetX: 195,
-    toggleBtn: { children: 'Landings' },
+    toggleBtn: { children: 'Apps' },
     menuItems: [
       {
-        title: 'CRM',
+        title: 'Adrenalin',
         theme: Themes.THEME_CRM,
-        image: '/assets/images/mega-menu/crm-light.svg',
-        status: 'Pro'
+        image: '/assets/images/mega-menu/redirect.svg',
+        link: { href: 'https://refex.myadrenalin.com/AdrenalinMax/#/', ...linkProps }
+        // status: 'Pro'
       },
       {
-        title: 'AI',
+        title: 'Gmail',
         theme: Themes.THEME_AI,
-        image: '/assets/images/mega-menu/ai-light.svg',
-        status: 'Pro'
-      },
-      {
-        title: 'Crypto',
-        theme: Themes.THEME_CRYPTO,
-        image: '/assets/images/mega-menu/crypto-light.svg',
-        status: 'Pro'
-      },
-      {
-        title: 'Hosting',
-        theme: Themes.THEME_HOSTING,
-        image: '/assets/images/mega-menu/hosting-light.svg',
-        status: 'Pro'
-      },
-      {
-        title: 'PMS',
-        theme: Themes.THEME_PMS,
-        image: '/assets/images/mega-menu/pms-light.svg',
-        status: 'Pro'
-      },
-      {
-        title: 'HRM',
-        theme: Themes.THEME_HRM,
-        image: '/assets/images/mega-menu/hrm-light.svg',
-        status: 'Pro'
-      },
-      {
-        title: 'Plugin',
-        theme: Themes.THEME_PLUGIN,
-        image: '/assets/images/mega-menu/plugin-light.svg',
-        status: 'Pro'
+        image: '/assets/images/mega-menu/gmail.svg',
+        link: { href: 'https://mail.google.com/mail/u/0/?tab=rm&ogbl', ...linkProps }
+        // status: 'Pro'
       }
-    ],
-    footerData: footerData()
+      // {
+      //   title: 'Crypto',
+      //   theme: Themes.THEME_CRYPTO,
+      //   image: '/assets/images/mega-menu/crypto-light.svg',
+      //   status: 'Pro'
+      // },
+      // {
+      //   title: 'Hosting',
+      //   theme: Themes.THEME_HOSTING,
+      //   image: '/assets/images/mega-menu/hosting-light.svg',
+      //   status: 'Pro'
+      // },
+      // {
+      //   title: 'PMS',
+      //   theme: Themes.THEME_PMS,
+      //   image: '/assets/images/mega-menu/pms-light.svg',
+      //   status: 'Pro'
+      // },
+      // {
+      //   title: 'HRM',
+      //   theme: Themes.THEME_HRM,
+      //   image: '/assets/images/mega-menu/hrm-light.svg',
+      //   status: 'Pro'
+      // },
+      // {
+      //   title: 'Plugin',
+      //   theme: Themes.THEME_PLUGIN,
+      //   image: '/assets/images/mega-menu/plugin-light.svg',
+      //   status: 'Pro'
+      // }
+    ]
+    // footerData: footerData()
   }
 };
 

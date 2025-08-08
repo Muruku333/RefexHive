@@ -1,5 +1,6 @@
 'use client';
 import PropTypes from 'prop-types';
+import { alpha } from '@mui/material/styles';
 
 import { useEffect, useRef, useState } from 'react';
 
@@ -25,6 +26,8 @@ import { getBackgroundDots } from '@/utils/getBackgroundDots';
 
 // @assets
 import Wave from '@/images/graphics/Wave';
+import { bgGradient } from '@/utils/css';
+import { Card, CardActionArea, CardContent, CardMedia } from '@mui/material';
 
 // threshold - adjust threshold as needed
 const options = { root: null, rootMargin: '0px', threshold: 0.6 };
@@ -97,15 +100,20 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
           zIndex: -1,
           borderBottomLeftRadius: boxRadius,
           borderBottomRightRadius: boxRadius,
-          background: getBackgroundDots(theme.palette.grey[300], 60, 35),
-          bgcolor: 'grey.100'
+          ...bgGradient({
+            // imgUrl: '/assets/images/background/bg.png',
+            imgUrl: '/assets/images/covers/cover_15.jpg',
+            color: alpha(theme.palette.grey[100], 0.8)
+          })
+          // background: getBackgroundDots(theme.palette.grey[300], 60, 35),
+          // bgcolor: 'grey.100'
         }}
       ></Box>
       <ContainerWrapper sx={{ py: SECTION_COMMON_PY }}>
         <Box ref={containerRef}>
           <Box sx={{ pb: { xs: 3, sm: 4, md: 5 } }}>
             <Stack sx={{ alignItems: 'center', gap: 1.5 }}>
-              <motion.div
+              {/* <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -128,7 +136,7 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
                   }
                   sx={{ bgcolor: 'grey.100', '& .MuiChip-label': { py: 0.5, px: 1.5 } }}
                 />
-              </motion.div>
+              </motion.div> */}
 
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -173,7 +181,7 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
                 </Typography>
               </motion.div>
             </Stack>
-            <Stack sx={{ alignItems: 'center', gap: 2, mt: { xs: 3, sm: 4, md: 5 } }}>
+            <Stack sx={{ alignItems: 'center', gap: 5, mt: { xs: 3, sm: 4, md: 5 } }}>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -203,7 +211,7 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
                   ease: [0.215, 0.61, 0.355, 1]
                 }}
               >
-                <Stack direction="row" sx={{ gap: 1, flexWrap: 'wrap', justifyContent: 'center' }}>
+                {/* <Stack direction="row" sx={{ gap: 1, flexWrap: 'wrap', justifyContent: 'center' }}>
                   {listData.map((item, index) => (
                     <Chip
                       key={index}
@@ -212,6 +220,50 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
                       icon={<GraphicsImage image={item.image} sx={{ width: 16, height: 16 }} />}
                       sx={{ height: 32, px: 1, bgcolor: 'grey.100', '& .MuiChip-label': { py: 0.75, px: 1 } }}
                     />
+                  ))}
+                </Stack> */}
+                <Stack direction="row" sx={{ gap: 1, flexWrap: 'wrap', justifyContent: 'center' }}>
+                  {listData.map((item, index) => (
+                    <Card
+                      key={index}
+                      sx={{
+                        width: 120,
+                        p: 0,
+                        bgcolor: 'grey.200',
+                        borderRadius: 2,
+                        boxShadow: 1,
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        textAlign: 'center'
+                      }}
+                      aria-label={item.title}
+                    >
+                      <CardActionArea
+                        component="a"
+                        href={item.link}
+                        sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', p: 1 }}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <CardMedia
+                          component="img"
+                          image={item.image}
+                          alt={item.title}
+                          sx={{
+                            width: 56,
+                            height: 56,
+                            objectFit: 'contain',
+                            mb: 0.5
+                          }}
+                        />
+                        <CardContent sx={{ py: 0.5, px: 1, '&:last-child': { pb: 0 } }}>
+                          <Typography variant="caption" noWrap>
+                            {item.title}
+                          </Typography>
+                        </CardContent>
+                      </CardActionArea>
+                    </Card>
                   ))}
                 </Stack>
               </motion.div>

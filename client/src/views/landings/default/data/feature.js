@@ -73,6 +73,7 @@ export const feature5 = {
 
 export const feature20 = {
   heading: 'Comprehensive UI Kit Tailored to your Need',
+  // image: '/assets/images/covers/cover_2.jpg',
   caption: 'Ready to transform your SaaS designs with one powerful UI Kit?',
   actionBtn: { children: 'Buy Now', href: BUY_NOW_URL, ...linkProps },
   secondaryBtn: { children: 'Explore Blocks', href: SECTION_PATH },
@@ -326,4 +327,24 @@ export const feature18 = {
       actionBtn2: { children: 'Docs', href: DOCS_URL, ...linkProps }
     }
   ]
+};
+
+export const slide = {
+  heading: 'Life at Refex',
+  caption: 'Join a workplace where cross-industry expertise drives purpose, progress, and performance.',
+  images: [
+    '/assets/images/carosol/carosol1.jpg',
+    '/assets/images/carosol/carosol2.jpg',
+    '/assets/images/carosol/carosol3.jpg',
+    '/assets/images/carosol/carosol4.jpg',
+    '/assets/images/carosol/carosol5.jpg',
+    '/assets/images/carosol/carosol6.jpg',
+    '/assets/images/carosol/carosol7.jpg',
+    '/assets/images/carosol/carosol8.jpg',
+    '/assets/images/carosol/carosol9.jpg',
+    '/assets/images/carosol/carosol10.jpg',
+    '/assets/images/carosol/carosol11.jpg',
+    '/assets/images/carosol/carosol12.jpg'
+  ],
+  autoPlayInterval: 4000
 };
